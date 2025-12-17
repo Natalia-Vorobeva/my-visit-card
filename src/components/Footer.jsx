@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Heart } from 'lucide-react';
+import { Mail, MessageSquare, Heart, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
 	const socialLinks = [
 		{ icon: MessageSquare, href: "https://t.me/vorobjevaa", label: "Telegram" },
 		{ icon: Mail, href: "mailto:vorobjeva.natalia76@gmail.com", label: "Email" }
 	];
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
 
 	return (
 		<footer className="py-12 px-4 bg-gray-900 text-white">
@@ -17,22 +21,25 @@ const Footer = () => {
 						viewport={{ once: true }}
 						className="text-center md:text-left"
 					>
-						<div className="flex items-center gap-3 mb-4">
+						{/* Логотип в футере - кнопка для скролла наверх */}
+						<motion.button
+							onClick={scrollToTop}
+							whileHover={{ y: -5 }}
+							className="flex items-center gap-3 mb-4 group"
+						>
 							<motion.div
 								whileHover={{ rotate: 15 }}
 								className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
 							>
-								<svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-								</svg>
+								<ArrowUp className="w-6 h-6 text-white" />
 							</motion.div>
 							<div className="text-2xl font-bold">
 								<span className="text-blue-400">Frontend</span>
 								<span>Craft</span>
 							</div>
-						</div>
+						</motion.button>
 						<p className="text-gray-400 max-w-md">
-							Дополнительные материалы к основному портфолио
+							Исследование бизнес-кейсов: как сайты решают конкретные задачи и приносят прибыль
 						</p>
 					</motion.div>
 
@@ -79,7 +86,7 @@ const Footer = () => {
 							<span>на React + Vite + Tailwind + Framer Motion</span>
 						</div>
 						<div>
-							<span>© {new Date().getFullYear()} FrontendCraft. Дополнение к портфолио</span>
+							<span>© {new Date().getFullYear()} FrontendCraft. Бизнес-кейсы digital-инструментов</span>
 						</div>
 					</div>
 				</motion.div>

@@ -36,7 +36,7 @@ const Pricing = () => {
 			oldPrice: "12 000 ₽",
 			deliveryTime: "5-7 дней",
 			features: [
-				"Всё из пакета Базовый +",
+				"Всё из пакета Базовый",
 				"Форма обратной связи",
 				"Расширенная галерея/слайдер",
 				"Тёмная/светлая тема",
@@ -59,11 +59,12 @@ const Pricing = () => {
 			oldPrice: "42 000 ₽",
 			deliveryTime: "20-40 дней",
 			features: [
+				"Всё из пакета Профессиональный",
 				"Личный кабинет клиента (демо выше)",
 				"Онлайн-запись и календарь",
 				"Система уведомлений",
 				"История заказов и платежей",
-				"Личные сообщения с клиентами",
+				"Личные сообщения клиентам",
 				"Мобильная версия ЛК",
 				"API для будущих интеграций",
 				"Глубокая SEO-оптимизация",
@@ -92,6 +93,12 @@ const Pricing = () => {
 		{
 			title: "Сайт мастера маникюра",
 			url: "https://natalia-vorobeva.github.io/business_card_manicure/",
+			features: ["Категории услуг", "Фильтрация", "Быстрая загрузка"],
+			color: "bg-gradient-to-r from-emerald-100 to-teal-100"
+		},
+		{
+			title: "Сайт мастера шугаринга",
+			url: "https://natalia-vorobeva.github.io/business_card_sugaring/",
 			features: ["Категории услуг", "Фильтрация", "Быстрая загрузка"],
 			color: "bg-gradient-to-r from-emerald-100 to-teal-100"
 		},
@@ -146,7 +153,7 @@ const Pricing = () => {
 									<Calendar className="w-6 h-6" />
 								</div>
 								<div className="font-bold text-lg mb-2">Быстрый старт</div>
-								<p className="text-white/80 text-sm">Сайт готов за 3-10 дней</p>
+								<p className="text-white/80 text-sm">Сайт готов за 3-14 дней</p>
 							</div>
 							<div className="flex flex-col items-center">
 								<div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3">
@@ -249,7 +256,7 @@ const Pricing = () => {
 				</div>
 
 				{/* Примеры работ */}
-				<motion.div
+				{/* <motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -293,53 +300,9 @@ const Pricing = () => {
 							</motion.a>
 						))}
 					</div>
-				</motion.div>
+				</motion.div> */}
 
-				{/* Важное примечание */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
-				>
-					<div className="flex flex-col md:flex-row items-center gap-6">
-						<div className="md:w-2/3">
-							<h3 className="text-2xl font-bold mb-4">Не нашли подходящий вариант?</h3>
-							<p className="text-gray-700 mb-4">
-								Я создам индивидуальное решение именно под ваши задачи. Расскажите, что вам нужно,
-								и я предложу оптимальный вариант в рамках вашего бюджета.
-							</p>
-							<ul className="space-y-2 text-gray-600">
-								<li className="flex items-center">
-									<Check className="w-4 h-4 text-green-500 mr-2" />
-									<span>Можно взять любой элемент из моих работ</span>
-								</li>
-								<li className="flex items-center">
-									<Check className="w-4 h-4 text-green-500 mr-2" />
-									<span>Добавить нужную именно вам функциональность</span>
-								</li>
-								<li className="flex items-center">
-									<Check className="w-4 h-4 text-green-500 mr-2" />
-									<span>Скорректировать дизайн под ваш бренд</span>
-								</li>
-							</ul>
-						</div>
-						<div className="md:w-1/3">
-							<motion.a
-								href="#contact"
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}
-								className="block w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover:shadow-lg transition-all flex items-center justify-center gap-2"
-							>
-								<span>Обсудить индивидуальный проект</span>
-								<ArrowRight className="w-5 h-5" />
-							</motion.a>
-							<p className="text-center text-sm text-gray-500 mt-3">
-								Отвечаю в течение 2 часов в рабочее время
-							</p>
-						</div>
-					</div>
-				</motion.div>
+
 
 				{/* Срочный CTA */}
 				<motion.div
@@ -363,12 +326,14 @@ const Pricing = () => {
 							ЗАКАЗАТЬ СЕЙЧАС СО СКИДКОЙ
 						</motion.a>
 						<motion.a
-							href="tel:+79991234567"
+							
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
-							className="px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-bold rounded-xl hover:bg-white/30 transition-all"
+							className="px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-bold rounded-xl hover:bg-white/30 transition-all relative group"
+							title="Позвонить по номеру +7 911 208-04-79"
 						>
-							ПОЗВОНИТЬ СЕЙЧАС
+							<span className="relative z-10">ПОЗВОНИТЬ: +7 911 208-04-79</span>
+							<div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
 						</motion.a>
 					</div>
 					<p className="mt-6 text-sm opacity-80">

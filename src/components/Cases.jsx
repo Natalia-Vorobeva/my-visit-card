@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Camera, Palette, Brain, ArrowUpRight, Briefcase, Target, Users, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Camera, Palette, Brain, ArrowRight, ArrowUpRight, Briefcase, Check, Layers, Sparkles, User, Zap, Heart, ChevronRight, ExternalLink, Code2, Scissors, Palette as PaletteIcon } from 'lucide-react';
 
 const Cases = () => {
 	const cases = [
@@ -13,20 +13,20 @@ const Cases = () => {
 			icon: Camera,
 			color: "from-amber-400 to-rose-500",
 			bgColor: "bg-gradient-to-br from-amber-50 to-rose-50",
-			metrics: ["+40% заказов", "95% скорость", "Адаптив"],
+			metrics: ["100% адаптив", "Автоматизация"],
 			businessValue: "Увеличение конверсии и автоматизация записи"
 		},
 		{
 			id: 2,
-			title: "Дизайнер",
-			subtitle: "Портфолио для UX/UI специалиста",
-			description: "Интерактивное портфолио с кейсами.",
+			title: "My Visit Card Demo",
+			subtitle: "Интерактивная демонстрация адаптивного дизайна",
+			description: "Живая демонстрация адаптивной визитки с переключением тем, интерактивными компонентами и дизайн-системой.",
 			path: "/cases/designer",
 			icon: Palette,
 			color: "from-indigo-400 to-purple-500",
 			bgColor: "bg-gradient-to-br from-indigo-50 to-purple-50",
-			metrics: ["3 клиента", "100% адаптив", "Тёмная тема"],
-			businessValue: "Профессиональная презентация"
+			metrics: ["Адаптивность", "2 темы", "Дизайн-система", "Интерактивность"],
+			businessValue: "Наглядная демонстрация технических навыков"
 		},
 		{
 			id: 3,
@@ -37,50 +37,106 @@ const Cases = () => {
 			icon: Brain,
 			color: "from-emerald-400 to-cyan-500",
 			bgColor: "bg-gradient-to-br from-emerald-50 to-cyan-50",
-			metrics: ["+65% запросов", "89% конверсия", "Безопасность"],
+			metrics: ["Безопасность", "Конфиденциальность"],
 			businessValue: "Автоматизация и повышение доверия клиентов"
 		},
-		// 	{
-		//   id: 4,
-		//   title: "Личный кабинет",
-		//   subtitle: "Демо-версия для онлайн-сервиса",
-		//   description: "Прототип личного кабинета с профилем, заказами и настройками.",
-		//   path: "/personal-account-demo",
-		//   icon: User,
-		//   color: "from-amber-400 to-yellow-500",
-		//   bgColor: "bg-gradient-to-br from-amber-50 to-yellow-50",
-		//   metrics: ["Профиль", "Заказы", "Настройки"],
-		//   businessValue: "Удобное управление аккаунтом для клиентов"
-		// },
 		{
-			id: 5,
+			id: 4,
 			title: "Личный кабинет",
 			subtitle: "Демо для онлайн-сервиса",
-			description: "Полноценная система управления заказами и клиентами.",
+			description: "Полноценная система управления заказами и клиентами с аналитикой и уведомлениями.",
 			path: "/client-account-demo",
 			icon: User,
 			color: "from-amber-400 to-yellow-500",
 			bgColor: "bg-gradient-to-br from-amber-50 to-yellow-50",
 			metrics: ["Управление", "Сообщения", "Аналитика"],
 			businessValue: "Автоматизация работы с клиентами"
-		}
-	];
-
-	const businessBenefits = [
-		{
-			icon: Briefcase,
-			title: "Для бизнеса",
-			items: ["Увеличение продаж", "Профессиональный имидж", "Автоматизация процессов"]
 		},
 		{
-			icon: Target,
-			title: "Для специалистов",
-			items: ["Персональный бренд", "Привлечение клиентов", "Экономия времени"]
+			id: 5,
+			title: "Веб-компоненты",
+			subtitle: "Готовые решения для вашего сайта",
+			description: "Коллекция интерактивных компонентов и слайдеров",
+			path: null,
+			icon: Layers,
+			color: "from-blue-400 to-cyan-500",
+			bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
+			metrics: ["Слайдеры", "Анимации", "Готовые решения"],
+			businessValue: "Экономия времени на разработку",
+			projects: [
+				{
+					title: "Презентация слайдеров",
+					url: "https://natalia-vorobeva.github.io/carousels/",
+					description: "7 типов интерактивных слайдеров с анимациями",
+					features: ["7 типов слайдеров", "Адаптивность", "Плавные анимации"],
+					icon: Layers,
+					color: "from-blue-400 to-cyan-400"
+				}
+			]
 		},
 		{
-			icon: Users,
-			title: "Для клиентов",
-			items: ["Удобство использования", "Быстрая загрузка", "Мобильность"]
+			id: 6,
+			title: "Услуги красоты",
+			subtitle: "Сайты для мастеров индустрии красоты",
+			description: "Специализированные решения для мастеров индустрии красоты",
+			path: null,
+			icon: Sparkles,
+			color: "from-pink-400 to-purple-500",
+			bgColor: "bg-gradient-to-br from-pink-50 to-purple-50",
+			metrics: ["Галерея", "Услуги", "Запись онлайн"],
+			businessValue: "Профессиональное онлайн-присутствие",
+			projects: [
+				{
+					title: "Сайт мастера парикмахера",
+					url: "https://natalia-vorobeva.github.io/business_card_hairdresser",
+					description: "Бизнес-сайт с галереей и записью",
+					features: ["Галерея работ", "Онлайн-запись", "Портфолио"],
+					icon: Scissors,
+					color: "from-rose-400 to-pink-400"
+				},
+				{
+					title: "Сайт мастера маникюра",
+					url: "https://natalia-vorobeva.github.io/business_card_manicure/",
+					description: "Сайт с категориями услуг и фильтрацией",
+					features: ["Категории услуг", "Фильтрация", "Быстрая загрузка"],
+					icon: Sparkles,
+					color: "from-fuchsia-400 to-purple-400"
+				},
+				{
+					title: "Сайт мастера шугаринга",
+					url: "https://natalia-vorobeva.github.io/business_card_sugaring/",
+					description: "Специализированный сайт для мастера шугаринга",
+					features: ["Прайс-лист", "Галерея работ", "Консультация"],
+					icon: PaletteIcon,
+					color: "from-violet-400 to-indigo-400"
+				}
+			]
+		},
+		{
+			id: 7,
+			title: "Фитнес-тренер",
+			subtitle: "Планируется",
+			description: "Сайт с расписанием тренировок, онлайн-записью и программой питания.",
+			path: null,
+			icon: Zap,
+			color: "from-green-400 to-emerald-500",
+			bgColor: "bg-gradient-to-br from-green-50 to-emerald-50",
+			metrics: ["Расписание", "Онлайн-запись", "Программы"],
+			businessValue: "Автоматизация записи на тренировки",
+			planned: true
+		},
+		{
+			id: 8,
+			title: "Кондитерская",
+			subtitle: "Планируется",
+			description: "Сайт с каталогом десертов, онлайн-заказом и калькулятором стоимости.",
+			path: null,
+			icon: Heart,
+			color: "from-rose-400 to-red-500",
+			bgColor: "bg-gradient-to-br from-rose-50 to-red-50",
+			metrics: ["Каталог", "Онлайн-заказ", "Калькулятор"],
+			businessValue: "Увеличение онлайн-продаж десертов",
+			planned: true
 		}
 	];
 
@@ -99,138 +155,250 @@ const Cases = () => {
 					</div>
 					<h2 className="text-4xl font-bold mb-4">Проекты с измеримыми результатами</h2>
 					<p className="text-gray-600 max-w-2xl mx-auto">
-						Каждый проект решает конкретные бизнес-задачи и приносит измеримую пользу
+						Возьмите готовый вариант или понравившийся элемент
+						<span>Можно комбинировать элементы из разных проектов!</span>
 					</p>
 				</motion.div>
 
-				{/* Преимущества для бизнеса */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ delay: 0.1 }}
-					className="mb-12"
-				>
-					<div className="grid md:grid-cols-3 gap-6">
-						{businessBenefits.map((benefit, index) => (
-							<motion.div
-								key={benefit.title}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ delay: 0.1 + index * 0.1 }}
-								whileHover={{ y: -5 }}
-								className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6"
-							>
-								<div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
-									<benefit.icon className="w-6 h-6 text-white" />
-								</div>
-								<h3 className="font-bold text-lg mb-3">{benefit.title}</h3>
-								<ul className="space-y-2">
-									{benefit.items.map((item, idx) => (
-										<li key={idx} className="flex items-center text-sm text-gray-600">
-											<div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
-											{item}
-										</li>
-									))}
-								</ul>
-							</motion.div>
-						))}
-					</div>
-				</motion.div>
-
 				{/* Кейсы */}
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
 					{cases.map((caseItem, index) => (
 						<motion.div
 							key={caseItem.id}
 							initial={{ opacity: 0, y: 50 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							transition={{ delay: index * 0.2 }}
-							whileHover={{ y: -10 }}
-							className="relative group"
+							transition={{ delay: index * 0.1 }}
+							whileHover={{ y: -5 }}
+							className={`relative group ${caseItem.planned ? 'opacity-75' : ''}`}
 						>
-							<Link to={caseItem.path}>
-								<div className={`${caseItem.bgColor} rounded-2xl p-8 h-full cursor-pointer border-2 border-transparent group-hover:border-blue-200 transition-all duration-300`}>
-									{/* Метрики наверху */}
-									<div className="flex flex-wrap gap-2 mb-6">
-										{caseItem.metrics.map((metric, idx) => (
-											<span
-												key={idx}
-												className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold"
-											>
-												{metric}
-											</span>
-										))}
-									</div>
+							{caseItem.path ? (
+								<Link to={caseItem.path}>
+									<CardContent caseItem={caseItem} />
+								</Link>
+							) : caseItem.projects ? (
+								// Специальный дизайн для карточек с проектами
+								<ProjectContainer caseItem={caseItem} />
+							) : (
+								<CardContent caseItem={caseItem} />
+							)}
 
-									{/* Иконка */}
-									<motion.div
-										whileHover={{ rotate: 15, scale: 1.1 }}
-										className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${caseItem.color} p-4 mb-6 flex items-center justify-center shadow-lg`}
-									>
-										<caseItem.icon className="w-8 h-8 text-white" />
-									</motion.div>
-
-									{/* Контент */}
-									<h3 className="text-2xl font-bold mb-2">{caseItem.title}</h3>
-									<p className="text-blue-600 font-semibold mb-2">{caseItem.subtitle}</p>
-									<p className="text-gray-600 mb-4">{caseItem.description}</p>
-
-									{/* Бизнес-ценность */}
-									<div className="mt-6 pt-6 border-t border-gray-200">
-										<div className="text-sm text-gray-500 mb-2">Бизнес-ценность:</div>
-										<div className="font-semibold text-gray-800">{caseItem.businessValue}</div>
-									</div>
-
-									{/* CTA */}
-									<motion.div
-										whileHover={{ x: 5 }}
-										className="flex items-center text-primary font-semibold mt-6"
-									>
-										<span>Изучить детали</span>
-										<ArrowUpRight className="w-5 h-5 ml-2" />
-									</motion.div>
+							{caseItem.planned && (
+								<div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent rounded-2xl flex items-start justify-left">
+									<span className="px-3 py-1 bg-gray-800 text-white text-xs rounded-full">
+										В планах
+									</span>
 								</div>
-							</Link>
+							)}
 						</motion.div>
 					))}
 				</div>
-
-				{/* Деловой CTA */}
+				{/* Важное примечание */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
-					className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white"
+					className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8"
 				>
-					<h3 className="text-2xl font-bold mb-4">Нужен сайт для вашего бизнеса?</h3>
-					<p className="mb-6 opacity-90 max-w-2xl mx-auto">
-						Создам современный сайт с фокусом на результативность и пользовательский опыт
-					</p>
-					<div className="flex flex-col sm:flex-row gap-4 justify-center">
-						<motion.a
-							href="#contact"
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:shadow-lg transition-all"
-						>
-							Обсудить проект
-						</motion.a>
-						<motion.a
-							href="#playground"
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							className="px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-lg hover:bg-white/30 transition-all"
-						>
-							Посмотреть стоимость
-						</motion.a>
+					<div className="flex flex-col md:flex-row items-center gap-6">
+						<div className="md:w-2/3">
+							<h3 className="text-2xl font-bold mb-4">Не нашли подходящий вариант?</h3>
+							<p className="text-gray-700 mb-4">
+								Я создам индивидуальное решение именно под ваши задачи. Расскажите, что вам нужно,
+								и я предложу оптимальный вариант в рамках вашего бюджета.
+							</p>
+							<ul className="space-y-2 text-gray-600">
+								<li className="flex items-center">
+									<Check className="w-4 h-4 text-green-500 mr-2" />
+									<span>Можно взять любой элемент из моих работ</span>
+								</li>
+								<li className="flex items-center">
+									<Check className="w-4 h-4 text-green-500 mr-2" />
+									<span>Добавить нужную именно вам функциональность</span>
+								</li>
+								<li className="flex items-center">
+									<Check className="w-4 h-4 text-green-500 mr-2" />
+									<span>Скорректировать дизайн под ваш бренд</span>
+								</li>
+							</ul>
+						</div>
+						<div className="md:w-1/3">
+							<motion.a
+								href="#contact"
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="block w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg text-center hover:shadow-lg transition-all flex items-center justify-center gap-2"
+							>
+								<span>Обсудить индивидуальный проект</span>
+								<ArrowRight className="w-5 h-5" />
+							</motion.a>
+							<p className="text-center text-sm text-gray-500 mt-3">
+								Отвечаю в течение 2 часов в рабочее время
+							</p>
+						</div>
 					</div>
 				</motion.div>
 			</div>
 		</section>
 	);
 };
+
+// Выносим содержимое карточки в отдельный компонент
+const CardContent = ({ caseItem }) => (
+	<div className={`${caseItem.bgColor} rounded-2xl p-6 h-full cursor-pointer border-2 border-transparent group-hover:border-blue-200 transition-all duration-300`}>
+		{/* Метрики наверху */}
+		{caseItem.metrics && caseItem.metrics.length > 0 && (
+			<div className="flex flex-wrap gap-2 mb-4">
+				{caseItem.metrics.map((metric, idx) => (
+					<span
+						key={idx}
+						className="px-2 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold"
+					>
+						{metric}
+					</span>
+				))}
+			</div>
+		)}
+
+		{/* Иконка */}
+		<motion.div
+			whileHover={{ rotate: 15, scale: 1.1 }}
+			className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${caseItem.color} p-3 mb-4 flex items-center justify-center shadow-lg`}
+		>
+			<caseItem.icon className="w-7 h-7 text-white" />
+		</motion.div>
+
+		{/* Контент */}
+		<h3 className="text-xl font-bold mb-2">{caseItem.title}</h3>
+		{caseItem.subtitle && (
+			<p className="text-blue-600 font-semibold text-sm mb-2">{caseItem.subtitle}</p>
+		)}
+		{caseItem.description && (
+			<p className="text-gray-600 text-sm mb-4">{caseItem.description}</p>
+		)}
+
+		{/* Бизнес-ценность */}
+		{caseItem.businessValue && (
+			<div className="mt-4 pt-4 border-t border-gray-200">
+				<div className="text-xs text-gray-500 mb-1">Бизнес-ценность:</div>
+				<div className="font-semibold text-gray-800 text-sm">{caseItem.businessValue}</div>
+			</div>
+		)}
+
+		{/* CTA */}
+		{caseItem.path && (
+			<motion.div
+				whileHover={{ x: 3 }}
+				className="flex items-center text-blue-600 font-semibold text-sm mt-4"
+			>
+				<span>Изучить детали</span>
+				<ArrowUpRight className="w-4 h-4 ml-1" />
+			</motion.div>
+		)}
+	</div>
+);
+
+// Специальный компонент для карточек с проектами
+const ProjectContainer = ({ caseItem }) => (
+	<div className={`${caseItem.bgColor} rounded-2xl p-6 h-full border-2 border-transparent group-hover:border-blue-200 transition-all duration-300`}>
+		{/* Заголовок категории */}
+		<div className="flex items-start gap-3 mb-6">
+			<motion.div
+				whileHover={{ rotate: 15, scale: 1.1 }}
+				className={`w-12 h-12 rounded-xl bg-gradient-to-br ${caseItem.color} p-3 flex items-center justify-center shadow-lg flex-shrink-0`}
+			>
+				<caseItem.icon className="w-6 h-6 text-white" />
+			</motion.div>
+			<div>
+				<h3 className="text-xl font-bold">{caseItem.title}</h3>
+				{caseItem.subtitle && (
+					<p className="text-blue-600 font-semibold text-sm">{caseItem.subtitle}</p>
+				)}
+				{caseItem.description && (
+					<p className="text-gray-600 text-sm mt-1">{caseItem.description}</p>
+				)}
+			</div>
+		</div>
+
+		{/* Метрики */}
+		{caseItem.metrics && caseItem.metrics.length > 0 && (
+			<div className="flex flex-wrap gap-2 mb-6">
+				{caseItem.metrics.map((metric, idx) => (
+					<span
+						key={idx}
+						className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-semibold"
+					>
+						{metric}
+					</span>
+				))}
+			</div>
+		)}
+
+		{/* Проекты */}
+		<div className="space-y-4">
+			{caseItem.projects.map((project, idx) => (
+				<motion.a
+					key={idx}
+					href={project.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					whileHover={{ x: 3 }}
+					className="block group/project"
+				>
+					<div className="p-4 bg-white/90 backdrop-blur-sm rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+						<div className="flex items-start gap-3">
+							{project.icon && (
+								<div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${project.color} p-2 flex items-center justify-center shadow-md flex-shrink-0`}>
+									<project.icon className="w-5 h-5 text-white" />
+								</div>
+							)}
+							<div className="flex-1 min-w-0">
+								<div className="flex items-center justify-between mb-1">
+									<h4 className="font-bold text-gray-900 truncate">{project.title}</h4>
+									<ExternalLink className="w-4 h-4 text-gray-400 group-hover/project:text-blue-500 transition-colors flex-shrink-0" />
+								</div>
+								{project.description && (
+									<p className="text-sm text-gray-600 mb-2">{project.description}</p>
+								)}
+								{project.features && project.features.length > 0 && project.features[0] && (
+									<div className="flex flex-wrap gap-1">
+										{project.features.map((feature, fIdx) => (
+											feature && (
+												<span
+													key={fIdx}
+													className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs"
+												>
+													{feature}
+												</span>
+											)
+										))}
+									</div>
+								)}
+							</div>
+						</div>
+					</div>
+				</motion.a>
+			))}
+		</div>
+
+		{/* Бизнес-ценность */}
+		{caseItem.businessValue && (
+			<div className="mt-6 pt-6 border-t border-gray-200">
+				<div className="text-xs text-gray-500 mb-1">Бизнес-ценность:</div>
+				<div className="font-semibold text-gray-800 text-sm">{caseItem.businessValue}</div>
+			</div>
+		)}
+
+		{/* Общий CTA */}
+		<div className="mt-6">
+			<motion.div
+				whileHover={{ x: 3 }}
+				className="flex items-center text-blue-600 font-semibold text-sm"
+			>
+				<ChevronRight className="w-4 h-4 ml-1" />
+			</motion.div>
+		</div>
+	</div>
+);
 
 export default Cases;

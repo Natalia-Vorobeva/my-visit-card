@@ -13,6 +13,16 @@
   }
 }
 
+@layer utilities {
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .drop-shadow-xl {
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+  }
+}
+
 /* Добавить в конец index.css */
 .clip-triangle {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
