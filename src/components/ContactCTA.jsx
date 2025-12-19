@@ -300,7 +300,7 @@ ${formData.message}
 	];
 
 	return (
-		<section ref={contactRef} id="contact" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+		<section ref={contactRef} className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
 			<div className="max-w-6xl mx-auto">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
