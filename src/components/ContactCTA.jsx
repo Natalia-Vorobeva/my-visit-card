@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Calendar, ArrowRight, Check, AlertCircle, RefreshCw, Send, Info, X } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 const ContactCTA = () => {
 	// Конфигурация
@@ -21,6 +23,9 @@ const ContactCTA = () => {
 	const [formStartTime] = useState(Date.now());
 
 	const isFormValid = formData.name && formData.email && formData.message;
+
+	 const contactRef = useRef(null);
+  const location = useLocation();
 
 	// Обработчики изменения полей с очисткой ошибок
 	const handleChange = (field, value) => {
@@ -70,6 +75,16 @@ const ContactCTA = () => {
 			userAnswer: ''
 		});
 	};
+
+	 useEffect(() => {
+    // Если пришли с /contact, скроллим к форме
+    if (location.pathname === '/' && document.referrer.includes('/contact')) {
+      contactRef.current?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }, [location]);
 
 	// Валидация email
 	const validateEmail = (email) => {
@@ -285,7 +300,7 @@ ${formData.message}
 	];
 
 	return (
-		<section id="contact" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+		<section ref={contactRef} id="contact" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
 			<div className="max-w-6xl mx-auto">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}

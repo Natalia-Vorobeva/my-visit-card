@@ -12,7 +12,9 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route  						path="/contact" 						element={<Navigate to="/#contact" replace state={{ scrollToSection: 'contact' }} />}
+					<Route
+						path="/contact"
+						element={<Navigate to="/" replace />}
 					/>
 					<Route path="/cases/photographer" element={<Photographer />} />
 					<Route path="/cases/designer" element={<Designer />} />
