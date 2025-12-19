@@ -7,20 +7,22 @@ import Psychologist from './pages/Psychologist';
 import ClientAccountDemo from './pages/ClientAccountDemo';
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/cases/photographer" element={<Photographer />} />
-          <Route path="/cases/designer" element={<Designer />} />
-          <Route path="/cases/psychologist" element={<Psychologist />} />
-          <Route path="/client-account-demo" element={<ClientAccountDemo />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route  						path="/contact" 						element={<Navigate to="/#contact" replace state={{ scrollToSection: 'contact' }} />}
+					/>
+					<Route path="/cases/photographer" element={<Photographer />} />
+					<Route path="/cases/designer" element={<Designer />} />
+					<Route path="/cases/psychologist" element={<Psychologist />} />
+					<Route path="/client-account-demo" element={<ClientAccountDemo />} />
+					<Route path="*" element={<Navigate to="/" replace />} />
+				</Route>
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;
