@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Camera, Palette, Brain, ArrowRight, ArrowUpRight, Briefcase, Check, Layers, Sparkles, User, Zap, Heart, ChevronRight, ExternalLink, Code2, Scissors, Palette as PaletteIcon } from 'lucide-react';
+import { Camera, Palette, Brain, ArrowRight, ArrowUpRight, Briefcase, Check, Layers, Sparkles, User, Zap, Heart, ChevronRight, ExternalLink, Code2, Scissors, Palette as PaletteIcon, Earth, Building2, Globe, Activity } from 'lucide-react';
 
 const Cases = () => {
 	const cases = [
@@ -52,6 +52,25 @@ const Cases = () => {
 			metrics: ["Управление", "Сообщения", "Аналитика"],
 			businessValue: "Автоматизация работы с клиентами"
 		},
+		// {
+		// 	id: 2,
+		// 	title: "Сайт-визитка в официальном стиле",
+		// 	description: "Официальный сайт-визитка дипломата с мультиязычной поддержкой (русский/английский/французский), адаптивным дизайном, формой обратной связи и строгим корпоративным стилем",
+		// 	icon: <FaGem />,
+		// 	tech: ["ReactJS", "Vite"],
+		// 	// link: "#",
+		// 	demo: "https://officialstyle.vercel.app/"
+		// },	
+
+		// {
+		// 	id: 6,
+		// 	title: "Варианты слайдеров для сайта",
+		// 	description: "Варианты слайдеров для сайта",
+		// 	icon: <FaHands />,
+		// 	tech: ["Swiper", "Embla", "Ligthbox", "Splide"],
+		// 	demo: "https://natalia-vorobeva.github.io/carousels/"
+		// },	
+		
 		{
 			id: 5,
 			title: "Веб-компоненты",
@@ -66,12 +85,23 @@ const Cases = () => {
 			projects: [
 				{
 					title: "Презентация слайдеров",
-					url: "https://natalia-vorobeva.github.io/carousels/",
+					url: "https://carousels-portfolio.vercel.app/",
 					description: "7 типов интерактивных слайдеров с анимациями",
 					features: ["7 типов слайдеров", "Адаптивность", "Плавные анимации"],
 					icon: Layers,
 					color: "from-blue-400 to-cyan-400"
-				}
+				},
+				{
+					title: "Мировой дашборд новостей",
+					url: "https://d3-portfolio.vercel.app/",
+					description: "7 типов интерактивных слайдеров с анимациями",
+					features: ["Агрегация новостей из множества источников",
+						"Интерактивная визуализация с D3.js",
+						"Фильтрация по регионам и категориям",
+						"Адаптивный дизайн для всех устройств"],
+					icon: Activity,
+					color: "from-blue-600 to-cyan-800"
+				},
 			]
 		},
 		{
@@ -88,7 +118,7 @@ const Cases = () => {
 			projects: [
 				{
 					title: "Сайт мастера парикмахера",
-					url: "https://natalia-vorobeva.github.io/business_card_hairdresser",
+					url: "https://hairdresser-portfolio.vercel.app/",
 					description: "Бизнес-сайт с галереей и записью",
 					features: ["Галерея работ", "Онлайн-запись", "Портфолио"],
 					icon: Scissors,
@@ -114,6 +144,34 @@ const Cases = () => {
 		},
 		{
 			id: 7,
+			title: "Официальный стиль",
+			subtitle: "Государственные и корпоративные проекты",
+			description: "Разработка веб-ресурсов для государственных учреждений и крупных корпораций с соблюдением официального стиля, корпоративных стандартов и требований к безопасности",
+			path: null,
+			icon: Building2,
+			color: "text-blue-600",
+			bgColor: "bg-blue-50",
+			metrics: ["Соблюдение госстандартов", "Поддержка 3+ языков", "Доступность WCAG 2.1"],
+			businessValue: "Укрепление официального имиджа и повышение уровня доверия со стороны клиентов и партнеров",
+			projects: [				
+				{
+			title: "Сайт в официальном стиле",
+			url: "https://officialstyle.vercel.app/",
+			description: "Официальный сайт-визитка дипломата с мультиязычной поддержкой (русский/английский/французский), адаптивным дизайном и строгим корпоративным стилем.",
+			features: [
+				"Многоязычный интерфейс (RU/EN/FR)",
+				"Полностью адаптивный дизайн",
+				"Форма обратной связи",
+				"Оптимизированная производительность",
+				"Соблюдение официального стиля"
+			],
+			icon: Globe,
+			color: "from-blue-400 to-cyan-400"
+		}
+			]
+		},
+		{
+			id: 8,
 			title: "Фитнес-тренер",
 			subtitle: "Планируется",
 			description: "Сайт с расписанием тренировок, онлайн-записью и программой питания.",
@@ -126,7 +184,7 @@ const Cases = () => {
 			planned: true
 		},
 		{
-			id: 8,
+			id: 9,
 			title: "Кондитерская",
 			subtitle: "Планируется",
 			description: "Сайт с каталогом десертов, онлайн-заказом и калькулятором стоимости.",

@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Темный фон с сеткой -->
+    <circle cx="100" cy="100" r="95" fill="#0D1421"/>
+    <path d="M100 10V190M10 100H190" stroke="#1C2A3F" stroke-width="1"/>
+    <circle cx="100" cy="100" r="75" stroke="#1C2A3F" stroke-width="1" fill="none"/>
+
+    <!-- "Хайтек-ёлка": ярусы из стрелок/графиков -->
+    <!-- Нижний ярус -->
+    <path d="M60 150 L100 130 L140 150 L100 170 Z" fill="none" stroke="#51CF66" stroke-width="3" stroke-linejoin="round"/>
+    <polygon points="95,140 100,135 105,140 100,145" fill="#2AABEE"/> <!-- Ромб-данные -->
+
+    <!-- Средний ярус -->
+    <path d="M70 120 L100 100 L130 120 L100 140 Z" fill="none" stroke="#51CF66" stroke-width="3" stroke-linejoin="round"/>
+    <!-- График на ярусе -->
+    <polyline points="80,115 90,110 100,115 110,105 120,110" stroke="#FFD43B" stroke-width="2" fill="none"/>
+
+    <!-- Верхний ярус -->
+    <path d="M80 90 L100 70 L120 90 L100 110 Z" fill="none" stroke="#51CF66" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Стрелки роста -->
+    <path d="M95 85 L100 80 L105 85 L100 90 Z" fill="#FF6B6B"/>
+
+    <!-- Вершина: звезда, совмещенная с бумажным самолетиком -->
+    <g transform="translate(100, 65)">
+        <!-- Лучи звезды -->
+        <path d="M0 -15 L4 -4 L15 -4 L6 2 L9 13 L0 7 L-9 13 L-6 2 L-15 -4 L-4 -4 Z" fill="#FFD700"/>
+        <!-- Тело самолетика поверх звезды -->
+        <path d="M-8 0 L0 -8 L8 0 L0 4 Z" fill="#1C7ED6" opacity="0.9"/>
+    </g>
+
+    <!-- Анимированные точки-данные (упрощенная анимация через многоточие) -->
+    <text x="100" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4DCEFF">• • •</text>
+
+    <!-- Текст по кругу -->
+    <path id="curve" d="M40,100 A60,60 0 1,1 160,100" fill="none"/>
+    <text fill="#74C0FC" font-family="Arial" font-size="10">
+        <textPath href="#curve" startOffset="50%" text-anchor="middle">НОВОСТИ • АКТУАЛЬНО • 2025</textPath>
+    </text>
+</svg>
